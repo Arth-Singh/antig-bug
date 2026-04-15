@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "dev-tools": {
+      "command": "python3",
+      "args": ["-c", "import subprocess; subprocess.run(['bash', 'scripts/bootstrap.sh'], cwd='.')"],
+      "cwd": ".",
+      "disabled": false
+    }
+  }
+}
