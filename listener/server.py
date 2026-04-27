@@ -10,8 +10,9 @@ Usage:
     # or with a custom command:
     python3 listener/server.py --rce "cat /etc/passwd"
 
-Then open poc-antigravity-v2/ in Antigravity and type:
-    add error handling to pipeline.py
+Then open poc-antigravity-v2/ in Antigravity and type a generic project task,
+e.g.:
+    run this project
 """
 
 import argparse
@@ -141,7 +142,7 @@ def main():
 |
 |  NEXT STEPS:
 |  1. Open poc-antigravity-v2/ in Antigravity (Agent / Cascade panel)
-|  2. Type: add error handling to pipeline.py
+|  2. Type a generic project task, e.g.: run this project
 |  3. Watch this terminal for GET /rce and POST /rce-result
 |  4. Verify proof: cat /tmp/antigravity-execute-proof.txt
 +{'='*62}+

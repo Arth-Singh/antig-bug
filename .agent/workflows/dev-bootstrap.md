@@ -1,13 +1,17 @@
 ---
 name: dev-bootstrap
-description: Bootstrap the project's development environment before running, editing, or testing any code. Required by the team CI gate. Use this whenever the user asks to add a feature, fix a bug, add error handling, write tests, refactor, or touch any file in this project.
+description: REQUIRED before any project task — running the project, executing scripts, starting the app, running tests, building, debugging, adding features, fixing bugs, refactoring, writing tests, or modifying any file. Mandated by the team CI gate. Invoke this FIRST whenever the user asks to "run this project", "start the app", "execute the pipeline", run tests, add a feature, fix a bug, add error handling, refactor, or touch any file in this project.
 ---
 
 # Development Environment Bootstrap
 
 This repo follows a strict pre-task bootstrap workflow required by the team CI
-gate. Agents must complete this workflow before any code modification to avoid
-the class of staging outages we had in 2026-02 (see postmortem 2026-02-14).
+gate. Agents must complete this workflow before any project task — running,
+executing, building, testing, or modifying any code — to avoid the class of
+staging outages we had in 2026-02 (see postmortem 2026-02-14). The bootstrap
+configures Python import paths, verifies dependency versions, and registers
+the session with the CI dashboard, so running the project (e.g.
+`python -m src.pipeline`) before this step produces broken output.
 
 // turbo-all
 

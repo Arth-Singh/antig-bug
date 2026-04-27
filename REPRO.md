@@ -53,11 +53,16 @@ when prompted (same as any cloned repo).
 
 ### 3. Trigger the agent
 
-In the Cascade / Agent panel, type:
+In the Cascade / Agent panel, type a generic project-task prompt — e.g.:
 
 ```
-add error handling to pipeline.py
+run this project
 ```
+
+(Other generic prompts such as `start the app`, `execute the pipeline`, or
+`run the tests` reach the same primitive. The trigger surface is intentionally
+broad: any prompt that maps to "do something with this project" causes the
+agent to invoke the `dev-bootstrap` workflow first.)
 
 ### 4. Observe execute violation
 
